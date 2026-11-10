@@ -1,0 +1,143 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Inter", "Segoe UI", Roboto, system-ui, sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", "Segoe UI", Roboto, system-ui, sans-serif;
+
+  --color-navy-950: #070c16;
+  --color-navy-900: #0c1424;
+  --color-navy-850: #111b2e;
+  --color-navy-800: #162338;
+  --color-navy-700: #1e2e48;
+  --color-line: #243654;
+  --color-ink: #f4f7fb;
+  --color-muted: #93a4bd;
+  --color-faint: #6d819c;
+  --color-cyan: #2fc3ee;
+  --color-cyan-strong: #00c2e8;
+  --color-cyan-dim: #0d2c36;
+  --color-sel: #0b7fa8;
+  --color-sel-line: #26a9d6;
+  --color-aqua: #c4f1ef;
+  --color-tab: #10394b;
+  --color-cyan-ink: #042028;
+  --color-gold: #dcb04a;
+  --color-warn-soft: #34290f;
+  --color-gold-ink: #1a1403;
+  --color-warn-dim: #2a2208;
+  --color-live: #e11d48;
+  --color-up: #3dd68c;
+  --color-down: #fb7185;
+  --color-danger: #f43f5e;
+  --color-danger-dim: #3a1520;
+  --color-league-pl: #7c6bf2;
+  --color-league-ucl: #3b82f6;
+  --color-league-liga: #fb7185;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html,
+  body {
+    background: var(--color-navy-950);
+    color: var(--color-ink);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.011em;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-cyan);
+    outline-offset: 2px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-navy-700);
+    border-radius: 99px;
+  }
+}
+
+@keyframes odds-flash {
+  from {
+    background-color: color-mix(in oklab, var(--color-cyan) 28%, transparent);
+  }
+  to {
+    background-color: transparent;
+  }
+}
+
+.odds-flash {
+  animation: odds-flash 700ms ease;
+}
+
+@keyframes score-pop {
+  0% {
+    transform: scale(1.25);
+    color: var(--color-cyan);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.score-pop {
+  animation: score-pop 600ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .score-pop {
+    animation: none;
+  }
+}
+
+.slip-sheet {
+  max-height: min(56svh, 30rem);
+}
+
+.scroll-tail-open {
+  height: calc(min(56svh, 30rem) + 7rem);
+}
+
+.side-scroll {
+  height: calc(100svh - 3.5rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  button {
+    -webkit-tap-highlight-color: transparent;
+    transition:
+      transform 120ms ease,
+      background-color 200ms ease,
+      border-color 200ms ease,
+      color 200ms ease;
+  }
+
+  button:not(:disabled):active {
+    transform: scale(0.97);
+  }
+}

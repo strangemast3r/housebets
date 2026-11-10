@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Housebets">
+  <rect width="32" height="32" rx="7" fill="#070c16"/>
+  <path fill="#f5c518" d="M5.5 14.2 16 5.2 26.5 14.2 23.4 14.2 16 8.1 8.6 14.2Z"/>
+  <rect x="8" y="13.6" width="16" height="12.4" rx="1.4" fill="#f4f7fb"/>
+  <rect x="13.4" y="17.6" width="5.2" height="8.4" rx="0.7" fill="#2ad4f4"/>
+</svg>

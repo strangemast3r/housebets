@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Housebets — Sports",
+      "hasCanvas": false,
+      "bodyTextLen": 1402,
+      "bodyTextHash": "2783504f728963a727265957b1da7ffc2c347d5b5f512f1107f90384ee08d481",
+      "bodyTextPrefix": "Skip to content Sports Live Football My bets T 1,234.56 USDT Sli",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Housebets — Sports",
+      "hasCanvas": false,
+      "bodyTextLen": 1211,
+      "bodyTextHash": "8b2e6c84025ef10d56cacd058b96523095ad40144a7716ce63345dccc57c62d3",
+      "bodyTextPrefix": "Skip to content Search teams, players, competitions, markets BAY",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
